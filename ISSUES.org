@@ -3,6 +3,8 @@ http://authors.aps.org/STYLE/
 
 * Abstract
   + [ ] Check abstract character count
+* Authors:
+  + [ ] Sheng-Hui is not on the new list?
 * Address
   + [X] Other authors' current address
 * Email / Address
@@ -13,9 +15,12 @@ http://authors.aps.org/STYLE/
 * PACS numbers
   + [ ] Non-egsistent numbers (2010)
   + [ ] New / more appropriate numbers
+  + [ ] Do they need keywords?
 * Unit formats
   + [ ] Create unit formats
   + [ ] Convert units into the right format
 * Reformate picture
   + [ ] Replot if can
   + [ ] JPG into EPS if can....
+* Misc
+  +
