@@ -2,16 +2,17 @@ Style instructions:
 http://authors.aps.org/STYLE/
 
 * Abstract
-  + [ ] Check abstract character count
+  + [X] Check abstract character count
+	Should be <600 now
 * Authors:
-  + [ ] Sheng-Hui is not on the new list?
+  + [X] Sheng-Hui is not on the new list?
 * Address
-  + [X] Other authors' current address
+  + [ ] Other authors' current address
 * Email / Address
   + [X] Position in footnote
 * References
-  + [ ] Appropropiate reference names (remove et.al)
-  + [ ] Double-check references
+  + [X] Appropropiate reference names (remove et.al)
+  + [X] Double-check references
 * PACS numbers
   + [ ] Non-egsistent numbers (2010)
   + [ ] New / more appropriate numbers
@@ -22,5 +23,13 @@ http://authors.aps.org/STYLE/
 * Reformate picture
   + [ ] Replot if can
   + [ ] JPG into EPS if can....
+* Sections
+  + [ ] Theory
+* Bibliography
+  + [X] Hockel -> H\"{o}ckel
+  + [X] small typos in capilaization of journal names
 * Misc
-  +
+  + [ ] Citation: "we constructed" ???
+  + [ ] Two synth citation -> one inline?
+  + [ ] Units don't have to have hyphen (e.g. 40-fs)
+  + [ ] Colour graphics? Or just dashed...
