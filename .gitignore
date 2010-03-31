@@ -1,0 +1,7 @@
+*~
+auto
+*.aux
+*.dvi
+*.ps
+*.pdf
+*.log
