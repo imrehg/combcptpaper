@@ -4,9 +4,9 @@ http://authors.aps.org/STYLE/
 * Abstract
   + [ ] Check abstract character count
 * Address
-  + [ ] Other authors' current address
+  + [X] Other authors' current address
 * Email / Address
-  + [ ] Position in footnote
+  + [X] Position in footnote
 * References
   + [ ] Appropropiate reference names (remove et.al)
   + [ ] Double-check references
@@ -16,3 +16,6 @@ http://authors.aps.org/STYLE/
 * Unit formats
   + [ ] Create unit formats
   + [ ] Convert units into the right format
+* Reformate picture
+  + [ ] Replot if can
+  + [ ] JPG into EPS if can....
