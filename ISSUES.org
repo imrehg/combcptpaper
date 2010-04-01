@@ -1,6 +1,11 @@
 Style instructions:
 http://authors.aps.org/STYLE/
 
+Needs:
+-----
+texlive-publishers (revtex4)
+texlive-langcjk (cjk)
+
 * Abstract
   + [X] Check abstract character count
 	Should be <600 now
