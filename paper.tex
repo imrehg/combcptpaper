@@ -3,6 +3,7 @@
 % version to submit to PRE.
 
 \documentclass[%
+%reprint,
 aps,
 prl,
 showpacs,
@@ -10,19 +11,33 @@ twocolumn,
 % preprint,
 ]{revtex4}
 
-\usepackage{graphicx}
+\usepackage{graphicx}  % needed for figures
+\usepackage{dcolumn}   % needed for some tables
+\usepackage{bm}        % for math
+\usepackage{amssymb}   % for math
 \usepackage{amsmath}
+\usepackage{CJK}
+\usepackage{subfig} % for subfigures
+%\usepackage[colorlinks=true,backref=true]{hyperref} 
+
+%%% Units
+%\newcommand{\unit}[1]{~\ensuremath{\, \mathrm{#1}}}
+\usepackage{units}
+
 
 \begin{document}
+\begin{CJK*}{UTF8}{}
+\CJKfamily{bsmi}
 
 \title{Sub-10 Hz dark resonance at the cesium clock frequency induced by an optical frequency comb laser}
 
-\author{Tsung-Han Wu}
+
+\author{Tsung-Han Wu (吳宗翰)}
  \altaffiliation{Currently at ???}
-\author{Yan-Long Peng}
-\author{Sheng-Hui Lu}
+\author{Yan-Long Peng (彭彥龍)}
+\author{Sheng-Hui Lu (呂聖輝)}
  \altaffiliation{Currently at ????}
-\author{Wang-Yau Cheng}
+\author{Wang-Yau Cheng (鄭王曜)}
  \email{wycheng@gate.sinica.edu.tw}
 \affiliation{Institute of Atomic and Molecular Sciences,
 Academia Sinica, Taiwan, R.O.C.}
@@ -33,7 +48,7 @@ Academia Sinica, Taiwan, R.O.C.}
 % Max of 600 characters for PRL, Rapid Comm abstracts.
 \begin{abstract}
 We used an optical frequency comb to resolve a dark state of
-exceptionally narrow linewidth (5.6~Hz) in cesium gas buffered
+exceptionally narrow linewidth (\unit[5.6]{Hz}) in cesium gas buffered
 with neon atoms, by precisely controlling the comb repetition rate.
 The substantial pressure shift of the clock frequency expected
 from the literature CW measurements was not observed. We
@@ -56,6 +71,7 @@ optical frequency.
 }
 
 \maketitle
+\end{CJK*}
 
 Ultimate atomic wavefunction control needs resolution at hyperfine
 level and needs highly coherent electromagnetic waves to build up 
@@ -90,6 +106,15 @@ cope with.
 
 \section{CPT signal measurement}
 
+\begin{figure*}
+  \centering
+  \includegraphics[scale=0.4]{experiment_big.eps}
+  \caption{Experimental setup schematic. PZT: piezoelectric transducer; W: comb laser output wedge; CTSDL: cesium two-photon stabilized diode laser; BS: 70:30 beam splitter. The offset-locking circuit, the function generator and the synthetizer used a common timebase from a LORAN-C receiver. $f_n$ and $f_{rep}$ denotes the equipment that controls the mode frequency and the repetition rate, respectively. DG: diffraction grating; SML: spatial light modulator; AOM: acousto-optic modulator; C: chopper; $\lambda/4$: quarter-wave plate for 852 nm; PMT: photo-multiplier tube; Cs: cesium cell with buffer gas (see text for buffer types) and surrounding solenoid coil.}
+  \label{fig:experiment}
+\end{figure*}
+
+
+
 To resolve the ultra-narrow dark resonance and to verify the role of mode 
 frequency, we constructed a comb laser system [?] with the block diagram shown 
 at the top of Fig. 1. The mode frequency was monitored by a reference laser 
@@ -98,7 +123,7 @@ locking was realized by horizontally shifting the pump beam with a piezoelectric
 transducer (PZT) [?]. The repetition rate $f_{rep}$ was phase locked against an 
 synthesizer~ whose time base was referred to a satellite-based 5 MHz 
 frequency standard via Loran-C. An additional [??] function generator was employed 
-to improve the measurement resolution to 10~$\mu{\rm Hz}$. To ensure ´orthogonal control¡ 
+to improve the measurement resolution to 10~$\mu{\rm Hz}$. To ensure ``orthogonal control''
 between the mode-frequency $f_n$ and the repetition rate $f_{rep}$, we dithered $f_n$ 
 by the PZT indicated in Fig. 1, with the dither width ranging from 1 to 10 MHz, 
 while simultaneously recording the maximum instability of the repetition rate 
@@ -108,8 +133,7 @@ uncertainty. Here, as usual, $f_n$ and $f_{rep}$ are related by
 \begin{equation*}
 f_n = f_{rep}\left(n + \frac{\phi}{2\pi}\right)
 \end{equation*}
-where 
-$n$ denotes the mode number and $\phi$ is the overall phase 
+where $n$ denotes the mode number and $\phi$ is the overall phase 
 difference between successive pulses. The lower part of Fig. 1 shows the block 
 diagram for retrieving the CPT signal. The 40 fs comb pulse, which was sent into
  the spatial light modulator (SLM) system, had 200 mW average power with a 
@@ -125,6 +149,27 @@ buffer gases. A photomultiplier tube (PMT) detected fluorescence from
 of the cell to the location of the PMT was 3.8 cm. The laser was chopped 
 with 500 Hz and the small reduction of the flurescence was measured with a lock-in amplifier. An acousto-optical modulator (AOM) was used to 
 stabilize the laser power to the noise level of $\pm 50$ nW. Power fluctuations at $\mu$W level will obscure the CPT signal.
+
+
+
+
+\begin{figure}
+\includegraphics[scale=0.5]{cpt1_word}
+\caption{\label{fig:cpt1} A figure caption. The figure captions are
+automatically numbered.}
+\end{figure}
+
+% \begin{figure}
+% \includegraphics[scale=0.5]{cpt2_word}
+% \caption{\label{fig:cpt2} A figure caption. The figure captions are
+% automatically numbered.}
+% \end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.5]{cpt3_word}
+\caption{\label{fig:cpt2better} A figure caption. The figure captions are
+automatically numbered.}
+\end{figure}
 
 Fig. 2 shows experimental results for a mixed buffer gas of 1.5~kPa N$_2$ and 1.5~kPa He. Fig. 3 shows results for 8.7 kPa Ne buffer gas. In Figs. 2 and 3, the estimated spectral linewidth of a one-photon resonance ($\Delta \omega$) is 260~MHz and 750~MHz (D2 line), 
 respectively, i.e., larger than the comb laser repetition rate (92~MHz). A CPT 
@@ -161,11 +206,27 @@ Since no theory has been reported on the subject of comb-laser-based CPT, we
 interpret our experimental results by employing a set of Bloch equations with 
 density matrix elements similar to Ref. 2, except that the Rabi frequency changes 
 rapidly with time, the dimension of the density matrix is extended to $4 \times 4$ for our 
-four-level system, and Adomian’s decomposition method [xiv] was adopted for solving 
+four-level system, and Adomian's decomposition method [xiv] was adopted for solving 
 the coupled partial differential equations in the time domain. To simplify the 
 time-domain calculation, we let the pulse carrier frequency $f_c$ coincide with 
 one comb mode $f_n$, and this simplification was examined and shown to have no 
-influence on the conclusions of this letter. The corresponding level diagram is 
+influence on the conclusions of this letter. 
+
+\begin{figure}
+\includegraphics[scale=0.4]{theory1_word}
+\caption{\label{fig:theory1} A figure caption. The figure captions are
+automatically numbered.}
+\end{figure}
+
+
+\begin{figure}
+\includegraphics[scale=0.5]{theory2_word}% Here is how to import EPS art
+\caption{\label{fig:wide}Use the figure* environment to get a wide
+figure that spans the page in \texttt{twocolumn} formatting.}
+\end{figure}
+
+
+The corresponding level diagram is 
 depicted on the right of Fig. 4 (a), where $\rho_{ij}$ denotes the matrix elements of the  density matrix, $\Gamma_{ij}$ is the level decay rate of excited states; $\gamma_1$, $\gamma_2$ 
 are the decoherent rate of the diagonal and off-diagonal terms between level 3 and 4, 
 respectively; and $\omega_{ij}$ is the level transition frequency between levels $i$ and $j$ ($i,j=1...4$). Note that,
@@ -204,8 +265,8 @@ Science Council in Taiwan with the project of NSC 94-2112-M-001-022-MY3.
 
 
 
-\begin{references}
-%\thebibliography
+\begin{thebibliography}{99}
+
 \bibitem{Stowe2008} M.~C. Stowe, A. Pe'er and J. Ye, Phys. Rev. Lett. {\bf 100}, 203001 (2008).
 
 \bibitem{Vanier2005} J. Vanier, Appl. Phys. B {\bf 81}, 421 (2005).
@@ -214,7 +275,7 @@ Science Council in Taiwan with the project of NSC 94-2112-M-001-022-MY3.
 
 \bibitem{Dudley2006} J.~M. Dudley, G. Genty and S. Coen, Rev. Mod. Phys. {\bf 78}, 1135 (2006).
 
-\bibitem{Arissian2006} L. Arissian and J.–C. Diels, Opt. Comm. {\bf 264}, 169 (2006).
+\bibitem{Arissian2006} L. Arissian and J.-C. Diels, Opt. Comm. {\bf 264}, 169 (2006).
 
 \bibitem{Cheng2008} W.-Y. Cheng, T.~H. Wu, S.~H. Huang S.~Y. Lin and C.~M. Wu, Appl. Phys. B {\bf 92}, 13 (2008).
 
@@ -234,11 +295,11 @@ Science Council in Taiwan with the project of NSC 94-2112-M-001-022-MY3.
 
 \bibitem{Kao2005} Y.~M. Kao, T.~F. Jiang and I. A. Yu, Phys. Rev. E {\bf 72}, 066703 (2005).
 
-\bibitem{Steck2009} D.~A. Steck, ΄Cesium D line data‘, available online at http://steck.us/alkalidata (revision 2.1.2, 12 August 2009).
+\bibitem{Steck2009} D.~A. Steck, Cesium D line data, available online at http://steck.us/alkalidata (revision 2.1.2, 12 August 2009).
 
-\end{references}
+\end{thebibliography}
 
-%\newpage
+
 
 % \begin{figure}   % fig 1
 % \caption{Density plot at time $t=500$ of the slow field
